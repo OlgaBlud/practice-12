@@ -1,4 +1,8 @@
 import { getRecipeById, getRecipes } from './js/recipes-api';
+import { renderAllRecipes } from './js/render-functions';
 
-getRecipes();
-getRecipeById(1);
+document.addEventListener('DOMContentLoaded', async () => {
+  const { recipes } = await getRecipes();
+
+  renderAllRecipes(recipes);
+});
