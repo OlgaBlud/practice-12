@@ -4,7 +4,7 @@ export function renderAllRecipes(recipes) {
   const markup = recipes
     .map(
       ({ image, name, id, cuisine, difficulty }) => `
-         <li class="recipes-item">
+         <li class="recipes-item" data-id="${id}">
         <img src="${image}" alt="${name}">
         <div>
           <p>${name}</p>
